@@ -7,6 +7,10 @@ const problemSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    frontendQuestionId:{
+        type:String,
+        required:true
+    },
     title: {
         type: String,
         required: true
@@ -14,10 +18,10 @@ const problemSchema = new mongoose.Schema({
     titleSlug: {
         type: String,
         required: true
-    },
+    },//it makes it easier to generate urls as compared to the problem name
     difficulty: {
-        type: String,
-        enum: ['Easy', 'Medium', 'Hard'],
+        type: Number,
+        enum:[1,2,3],
         required: true
     },
     status: {
